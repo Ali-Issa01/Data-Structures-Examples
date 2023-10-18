@@ -33,7 +33,9 @@ public class SetTest {
 		
 		System.out.println("The element just before \"Red\": "+ ((TreeSet<String>) colorsAsTS).lower("Red"));
 		System.out.println("The element just after \"Red\": "+ ((TreeSet<String>) colorsAsTS).higher("Red"));
-		
+		System.out.println(colorsAsHS.contains("Red"));
+		System.out.println(colorsAsHS.contains("Violet"));
+		// the method .contains() can be used on any collection, it returns true if the value is in the collection and false otherwise.
 
 	}
 
