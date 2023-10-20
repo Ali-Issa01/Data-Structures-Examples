@@ -20,10 +20,12 @@ public class SetTest {
 		// duplicates will be removed and there will be an order
 	
 		System.out.println("Colors before orange:"+ ((TreeSet<String>) colorsAsTS).headSet("Orange"));
-		//.headSet and .tailSet are only for a TreeSet
 		//gets all the elements before the parameter excluding the parameter
+		//.headSet and .tailSet are only for a TreeSet, that is why we casted it. 
+		//-> We gave colorsAsTS a Set datatype above and not a Treeset.
 		
-		System.out.println("Colors after orange:"+ (((TreeSet<String>) colorsAsTS).headSet("Orange")));
+		
+		System.out.println("Colors after orange:"+ (((TreeSet<String>) colorsAsTS).tailSet("Orange")));
 		//gets all the elements after the parameter including the parameter
 		
 		System.out.println("First Color: " + ((TreeSet<String>) colorsAsTS).first());
@@ -36,7 +38,7 @@ public class SetTest {
 		System.out.println(colorsAsHS.contains("Red"));
 		System.out.println(colorsAsHS.contains("Violet"));
 		// the method .contains() can be used on any collection, it returns true if the value is in the collection and false otherwise.
-
+		// however its Time Complexity might differ from one collection to another.
 	}
 
 }
