@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class FactorialExampleRec {
 	public static void main(String[] args) {
-		//All three method we generate an output of : 24 (in the case of 4)
+		//All three method will generate an output of : 24 (in the case of 4)
 		System.out.println("Iterative solution: " + fact_iter(4));
 		System.out.println("Recurive solution: " + fact_rec(4));
 		
