@@ -1,5 +1,7 @@
 package com.AliIssa;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -8,7 +10,10 @@ public class Fibonacci {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a number: ");
 		int n = scan.nextInt();
+		Instant before = Instant.now(); // catch the instant before starting
 		System.out.println(fib(n));
+		Instant after = Instant.now();// catch the instant after starting
+		Duration.between(before, after).toMillis(); // calculation the duration of execution
 		
 		
 	}
