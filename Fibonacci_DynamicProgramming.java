@@ -1,5 +1,7 @@
 package com.AliIssa;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Scanner;
 
 public class Fibonacci_DynamicProgramming {
@@ -7,9 +9,10 @@ public class Fibonacci_DynamicProgramming {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a number:");
 		int n = scan.nextInt();
-		
+		Instant before = Instant.now(); // catch the instant before starting
 		System.out.println(fib_dp(n,new long[n+1]));
-		
+		Instant after = Instant.now();// catch the instant after starting
+		Duration.between(before, after).toMillis(); // calculation the duration of execution
 	}
 	
 	public static int fib_dp(int n, long[] cache) {
